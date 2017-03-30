@@ -1,0 +1,12 @@
+---
+
+- name: create monapi container
+  docker_container:
+    name: "{{ monapi_container_name }}"
+    image: "{{ monapi_container_image }}:{{ monapi_container_image_tag }}"
+    state: "{{ monapi_container_state }}"
+    restart_policy: "{{ monapi_container_restart_policy }}"
+    volumes: "{{ monapi_container_volumes }}"
+    ports: "{{ monapi_container_ports }}"
+    pull: "{{ monapi_container_pull }}"
+    env: "{{ monapi_container_env }}"

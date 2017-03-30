@@ -1,0 +1,23 @@
+---
+
+## Conatiner info
+monapi_container_name: "monapi"
+monapi_container_image: "gbolo/monapi"
+monapi_container_image_tag: "latest"
+monapi_container_pull: false
+monapi_container_volume: ~
+monapi_container_data_volume: ~
+monapi_container_config_volume: ~
+monapi_container_state: "started"
+monapi_container_restart_policy: "unless-stopped"
+
+monapi_container_ports:
+  - "8080:8080"
+
+monapi_container_volumes: []
+
+## monapi configuration
+monapi_container_env:
+  "MONAPI_SERVER_BIND_ADDRESS": "0.0.0.0"
+  "MONAPI_SERVER_BIND_PORT": "8080"
+  "MONAPI_SENSU_API_ADDRESS": "some-sensu-api-server.tld:4567"
